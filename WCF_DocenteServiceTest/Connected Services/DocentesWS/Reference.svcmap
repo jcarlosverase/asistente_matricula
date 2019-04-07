@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="db272d46-7ba1-4068-b37f-8c9724fd2810" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56460/DocenteService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DocenteService.xsd" MetadataType="Schema" ID="f5b9c25b-2042-49cc-8af1-911694ac98d5" SourceId="1" SourceUrl="http://localhost:56460/DocenteService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DocenteService1.xsd" MetadataType="Schema" ID="ad00b9ba-ad98-4d75-ac07-9e77b9599230" SourceId="1" SourceUrl="http://localhost:56460/DocenteService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DocenteService.wsdl" MetadataType="Wsdl" ID="152f5646-6aed-4878-a8dc-3ea57de1d8d7" SourceId="1" SourceUrl="http://localhost:56460/DocenteService.svc?wsdl" />
+    <MetadataFile FileName="DocenteService2.xsd" MetadataType="Schema" ID="f6712f69-f910-4469-be4b-48285d45f575" SourceId="1" SourceUrl="http://localhost:56460/DocenteService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DocenteService3.xsd" MetadataType="Schema" ID="70a2cd7b-b5bf-47a5-8735-32cf3eaf17b5" SourceId="1" SourceUrl="http://localhost:56460/DocenteService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DocenteService.disco" MetadataType="Disco" ID="6ff99a12-c36b-448c-8152-3ec787200784" SourceId="1" SourceUrl="http://localhost:56460/DocenteService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

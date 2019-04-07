@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_DocenteService", "WCF_DocenteService.csproj", "{DE77425F-542E-4EE3-91B0-0DBC030DEC22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_DocenteServiceTest", "..\WCF_DocenteServiceTest\WCF_DocenteServiceTest.csproj", "{9ECEB4D5-021D-48B0-B475-4283008DE15D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DE77425F-542E-4EE3-91B0-0DBC030DEC22} = {DE77425F-542E-4EE3-91B0-0DBC030DEC22}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE77425F-542E-4EE3-91B0-0DBC030DEC22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE77425F-542E-4EE3-91B0-0DBC030DEC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE77425F-542E-4EE3-91B0-0DBC030DEC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE77425F-542E-4EE3-91B0-0DBC030DEC22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ECEB4D5-021D-48B0-B475-4283008DE15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ECEB4D5-021D-48B0-B475-4283008DE15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ECEB4D5-021D-48B0-B475-4283008DE15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ECEB4D5-021D-48B0-B475-4283008DE15D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28B59CBF-87AD-4B14-A58B-5801ED51097F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DocenteService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56460/DocenteService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56460/DocenteService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WCF_DocenteService.Errores" />
+      <xsd:import schemaLocation="http://localhost:56460/DocenteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56460/DocenteService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_DocenteService.Dominio" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocenteService_CrearDocente_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearDocente" />
+  </wsdl:message>
+  <wsdl:message name="IDocenteService_CrearDocente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearDocenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocenteService_CrearDocente_RepetidoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WCF_DocenteService.Errores" name="detail" element="q1:RepetidoException" />
+  </wsdl:message>
+  <wsdl:message name="IDocenteService_ObtenerDocente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocente" />
+  </wsdl:message>
+  <wsdl:message name="IDocenteService_ObtenerDocente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocenteService_ModificarDocente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarDocente" />
+  </wsdl:message>
+  <wsdl:message name="IDocenteService_ModificarDocente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarDocenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocenteService_EliminarDocente_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDocente" />
+  </wsdl:message>
+  <wsdl:message name="IDocenteService_EliminarDocente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDocenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocenteService_ListarDocentes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocentes" />
+  </wsdl:message>
+  <wsdl:message name="IDocenteService_ListarDocentes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocentesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDocenteService">
+    <wsdl:operation name="CrearDocente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocenteService/CrearDocente" message="tns:IDocenteService_CrearDocente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocenteService/CrearDocenteResponse" message="tns:IDocenteService_CrearDocente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDocenteService/CrearDocenteRepetidoExceptionFault" name="RepetidoExceptionFault" message="tns:IDocenteService_CrearDocente_RepetidoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocenteService/ObtenerDocente" message="tns:IDocenteService_ObtenerDocente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocenteService/ObtenerDocenteResponse" message="tns:IDocenteService_ObtenerDocente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDocente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocenteService/ModificarDocente" message="tns:IDocenteService_ModificarDocente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocenteService/ModificarDocenteResponse" message="tns:IDocenteService_ModificarDocente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDocente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocenteService/EliminarDocente" message="tns:IDocenteService_EliminarDocente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocenteService/EliminarDocenteResponse" message="tns:IDocenteService_EliminarDocente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocentes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocenteService/ListarDocentes" message="tns:IDocenteService_ListarDocentes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocenteService/ListarDocentesResponse" message="tns:IDocenteService_ListarDocentes_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDocenteService" type="tns:IDocenteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearDocente">
+      <soap:operation soapAction="http://tempuri.org/IDocenteService/CrearDocente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RepetidoExceptionFault">
+        <soap:fault use="literal" name="RepetidoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocente">
+      <soap:operation soapAction="http://tempuri.org/IDocenteService/ObtenerDocente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDocente">
+      <soap:operation soapAction="http://tempuri.org/IDocenteService/ModificarDocente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDocente">
+      <soap:operation soapAction="http://tempuri.org/IDocenteService/EliminarDocente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocentes">
+      <soap:operation soapAction="http://tempuri.org/IDocenteService/ListarDocentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocenteService">
+    <wsdl:port name="BasicHttpBinding_IDocenteService" binding="tns:BasicHttpBinding_IDocenteService">
+      <soap:address location="http://localhost:56460/DocenteService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,7 @@
+D:\Workspace\DSD\AsistenteMatricula\WCF_DocenteService\bin\WCF_DocenteService.dll.config
+D:\Workspace\DSD\AsistenteMatricula\WCF_DocenteService\bin\WCF_DocenteService.dll
+D:\Workspace\DSD\AsistenteMatricula\WCF_DocenteService\bin\WCF_DocenteService.pdb
+D:\Workspace\DSD\AsistenteMatricula\WCF_DocenteService\obj\Debug\WCF_DocenteService.csprojAssemblyReference.cache
+D:\Workspace\DSD\AsistenteMatricula\WCF_DocenteService\obj\Debug\WCF_DocenteService.csproj.CoreCompileInputs.cache
+D:\Workspace\DSD\AsistenteMatricula\WCF_DocenteService\obj\Debug\WCF_DocenteService.dll
+D:\Workspace\DSD\AsistenteMatricula\WCF_DocenteService\obj\Debug\WCF_DocenteService.pdb
