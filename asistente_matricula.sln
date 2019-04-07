@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GestionarUniversidadSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GestionarAsistenteService", "WCF_GestionarAsistenteService\WCF_GestionarAsistenteService.csproj", "{00B66606-EFA7-4EE7-BA23-5DE27B4771F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GestionarReporteService", "WCF_GestionarReporteService\WCF_GestionarReporteService.csproj", "{20BFACB5-B58D-4C92-A532-F0DCE823967C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{00B66606-EFA7-4EE7-BA23-5DE27B4771F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00B66606-EFA7-4EE7-BA23-5DE27B4771F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00B66606-EFA7-4EE7-BA23-5DE27B4771F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20BFACB5-B58D-4C92-A532-F0DCE823967C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20BFACB5-B58D-4C92-A532-F0DCE823967C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20BFACB5-B58D-4C92-A532-F0DCE823967C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20BFACB5-B58D-4C92-A532-F0DCE823967C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
