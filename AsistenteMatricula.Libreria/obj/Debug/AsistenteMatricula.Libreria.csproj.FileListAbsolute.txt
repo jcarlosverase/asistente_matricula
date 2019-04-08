@@ -1,0 +1,4 @@
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\AsistenteMatricula.Libreria\bin\Debug\AsistenteMatricula.Libreria.dll
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\AsistenteMatricula.Libreria\bin\Debug\AsistenteMatricula.Libreria.pdb
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\AsistenteMatricula.Libreria\obj\Debug\AsistenteMatricula.Libreria.dll
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\AsistenteMatricula.Libreria\obj\Debug\AsistenteMatricula.Libreria.pdb
