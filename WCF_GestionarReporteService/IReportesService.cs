@@ -14,5 +14,10 @@ namespace WCF_GestionarReporteService
     {
         [OperationContract]
         List<Valoracion> RankingDocentes(DateTime FechaInicio, DateTime FechaFina);
+        [OperationContract]
+        void Enviar(string Correo, string Asunto, string Mensaje, byte[] Archivo = null, string NombreArchivo = "");
+
+        [OperationContract]
+        UniversidadUsuario Autenticacion(string RUC, string Correo, string Contrasenia);
     }
 }

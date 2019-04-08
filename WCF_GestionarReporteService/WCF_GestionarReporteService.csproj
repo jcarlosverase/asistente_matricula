@@ -62,7 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ReportesService.svc" />
-    <Content Include="UniversidadUsuarioService.svc" />
+    <None Include="Service References\NotificacionService\EnviarCorreo.disco" />
+    <None Include="Service References\NotificacionService\configuration91.svcinfo" />
+    <None Include="Service References\NotificacionService\configuration.svcinfo" />
+    <None Include="Service References\NotificacionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -70,7 +76,6 @@
     <Compile Include="Dominio\UniversidadUsuario.cs" />
     <Compile Include="Errores\RepetidoException.cs" />
     <Compile Include="IReportesService.cs" />
-    <Compile Include="IUniversidadUsuarioService.cs" />
     <Compile Include="Local.cs" />
     <Compile Include="Persistencia\ValoracionDAO.cs" />
     <Compile Include="Persistencia\UniversidadUsuarioDAO.cs" />
@@ -78,14 +83,23 @@
     <Compile Include="ReportesService.svc.cs">
       <DependentUpon>ReportesService.svc</DependentUpon>
     </Compile>
-    <Compile Include="UniversidadUsuarioService.svc.cs">
-      <DependentUpon>UniversidadUsuarioService.svc</DependentUpon>
+    <Compile Include="Service References\NotificacionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\NotificacionService\EnviarCorreo.wsdl" />
+    <None Include="Service References\NotificacionService\EnviarCorreo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NotificacionService\EnviarCorreo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -98,6 +112,12 @@
       <Project>{d6072554-6992-4feb-90d3-5e1b680d5084}</Project>
       <Name>AsistenteMatricula.Libreria</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\NotificacionService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
