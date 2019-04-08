@@ -7,7 +7,7 @@ namespace WCF_GestionarReporteService.Errores
     public class RepetidoException
     {
         [DataMember]
-        public int Codigo { get; set; }
+        public string Codigo { get; set; }
 
         [DataMember]
         public string Descripcion { get; set; } 
