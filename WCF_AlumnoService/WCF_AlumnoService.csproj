@@ -60,9 +60,22 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Alumno.svc" />
+    <Content Include="GenerarPIN.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumno.svc.cs">
+      <DependentUpon>Alumno.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Dominio\Estudiante.cs" />
+    <Compile Include="Error\ResultObject.cs" />
+    <Compile Include="GenerarPIN.svc.cs">
+      <DependentUpon>GenerarPIN.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IAlumno.cs" />
+    <Compile Include="IGenerarPIN.cs" />
+    <Compile Include="Persistencia\AlumnoDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +88,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

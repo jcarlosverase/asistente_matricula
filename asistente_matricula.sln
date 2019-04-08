@@ -20,6 +20,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_UniversidadAService", "WCF_UniversidadAService\WCF_UniversidadAService.csproj", "{072003B0-74C5-4540-9D4C-DD9090B1594F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GestionarUniversidadService", "WCF_GestionarUniversidadService\WCF_GestionarUniversidadService.csproj", "{AFC1C516-808F-4E66-AE74-F7F7D991A2A6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2B6F8C37-FCBD-48EE-A845-516A906B150E} = {2B6F8C37-FCBD-48EE-A845-516A906B150E}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GestionarAsistenteService", "WCF_GestionarAsistenteService\WCF_GestionarAsistenteService.csproj", "{00B66606-EFA7-4EE7-BA23-5DE27B4771F1}"
 EndProject

@@ -5,3 +5,10 @@ D:\Workspace\DSD\AsistenteMatricula\WCF_DocenteService\obj\Debug\WCF_DocenteServ
 D:\Workspace\DSD\AsistenteMatricula\WCF_DocenteService\obj\Debug\WCF_DocenteService.csproj.CoreCompileInputs.cache
 D:\Workspace\DSD\AsistenteMatricula\WCF_DocenteService\obj\Debug\WCF_DocenteService.dll
 D:\Workspace\DSD\AsistenteMatricula\WCF_DocenteService\obj\Debug\WCF_DocenteService.pdb
+D:\SSDD\HAACC\asistente_matricula\WCF_DocenteService\bin\WCF_DocenteService.dll.config
+D:\SSDD\HAACC\asistente_matricula\WCF_DocenteService\bin\WCF_DocenteService.dll
+D:\SSDD\HAACC\asistente_matricula\WCF_DocenteService\bin\WCF_DocenteService.pdb
+D:\SSDD\HAACC\asistente_matricula\WCF_DocenteService\obj\Debug\WCF_DocenteService.csprojAssemblyReference.cache
+D:\SSDD\HAACC\asistente_matricula\WCF_DocenteService\obj\Debug\WCF_DocenteService.csproj.CoreCompileInputs.cache
+D:\SSDD\HAACC\asistente_matricula\WCF_DocenteService\obj\Debug\WCF_DocenteService.dll
+D:\SSDD\HAACC\asistente_matricula\WCF_DocenteService\obj\Debug\WCF_DocenteService.pdb

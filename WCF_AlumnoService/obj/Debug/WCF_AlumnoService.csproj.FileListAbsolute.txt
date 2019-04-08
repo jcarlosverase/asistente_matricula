@@ -1,0 +1,7 @@
+D:\SSDD\HAACC\asistente_matricula\WCF_AlumnoService\bin\WCF_AlumnoService.dll.config
+D:\SSDD\HAACC\asistente_matricula\WCF_AlumnoService\bin\WCF_AlumnoService.dll
+D:\SSDD\HAACC\asistente_matricula\WCF_AlumnoService\bin\WCF_AlumnoService.pdb
+D:\SSDD\HAACC\asistente_matricula\WCF_AlumnoService\obj\Debug\WCF_AlumnoService.csprojAssemblyReference.cache
+D:\SSDD\HAACC\asistente_matricula\WCF_AlumnoService\obj\Debug\WCF_AlumnoService.csproj.CoreCompileInputs.cache
+D:\SSDD\HAACC\asistente_matricula\WCF_AlumnoService\obj\Debug\WCF_AlumnoService.dll
+D:\SSDD\HAACC\asistente_matricula\WCF_AlumnoService\obj\Debug\WCF_AlumnoService.pdb

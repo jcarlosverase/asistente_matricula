@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Alumno" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61148/Alumno.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61148/Alumno.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Alumno.Error" />
+      <xsd:import schemaLocation="http://localhost:61148/Alumno.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61148/Alumno.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Alumno.Dominio" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAlumno_CrearEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="IAlumno_CrearEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlumno_CrearEstudiante_ResultObjectFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Alumno.Error" name="detail" element="q1:ResultObject" />
+  </wsdl:message>
+  <wsdl:message name="IAlumno_ValidarEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="IAlumno_ValidarEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlumno_ObtenerEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="IAlumno_ObtenerEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlumno_ModificarEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="IAlumno_ModificarEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlumno_ListarEstudiantes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEstudiantes" />
+  </wsdl:message>
+  <wsdl:message name="IAlumno_ListarEstudiantes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEstudiantesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAlumno">
+    <wsdl:operation name="CrearEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlumno/CrearEstudiante" message="tns:IAlumno_CrearEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlumno/CrearEstudianteResponse" message="tns:IAlumno_CrearEstudiante_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAlumno/CrearEstudianteResultObjectFault" name="ResultObjectFault" message="tns:IAlumno_CrearEstudiante_ResultObjectFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlumno/ValidarEstudiante" message="tns:IAlumno_ValidarEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlumno/ValidarEstudianteResponse" message="tns:IAlumno_ValidarEstudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlumno/ObtenerEstudiante" message="tns:IAlumno_ObtenerEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlumno/ObtenerEstudianteResponse" message="tns:IAlumno_ObtenerEstudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlumno/ModificarEstudiante" message="tns:IAlumno_ModificarEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlumno/ModificarEstudianteResponse" message="tns:IAlumno_ModificarEstudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarEstudiantes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlumno/ListarEstudiantes" message="tns:IAlumno_ListarEstudiantes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlumno/ListarEstudiantesResponse" message="tns:IAlumno_ListarEstudiantes_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAlumno" type="tns:IAlumno">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearEstudiante">
+      <soap:operation soapAction="http://tempuri.org/IAlumno/CrearEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ResultObjectFault">
+        <soap:fault use="literal" name="ResultObjectFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstudiante">
+      <soap:operation soapAction="http://tempuri.org/IAlumno/ValidarEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstudiante">
+      <soap:operation soapAction="http://tempuri.org/IAlumno/ObtenerEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstudiante">
+      <soap:operation soapAction="http://tempuri.org/IAlumno/ModificarEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEstudiantes">
+      <soap:operation soapAction="http://tempuri.org/IAlumno/ListarEstudiantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Alumno">
+    <wsdl:port name="BasicHttpBinding_IAlumno" binding="tns:BasicHttpBinding_IAlumno">
+      <soap:address location="http://localhost:61148/Alumno.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

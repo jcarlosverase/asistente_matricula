@@ -1,0 +1,7 @@
+D:\SSDD\HAACC\asistente_matricula\WCF_GestionarUniversidadService\obj\Debug\WCF_GestionarUniversidadService.csprojAssemblyReference.cache
+D:\SSDD\HAACC\asistente_matricula\WCF_GestionarUniversidadService\obj\Debug\WCF_GestionarUniversidadService.csproj.CoreCompileInputs.cache
+D:\SSDD\HAACC\asistente_matricula\WCF_GestionarUniversidadService\bin\WCF_GestionarUniversidadService.dll.config
+D:\SSDD\HAACC\asistente_matricula\WCF_GestionarUniversidadService\bin\WCF_GestionarUniversidadService.dll
+D:\SSDD\HAACC\asistente_matricula\WCF_GestionarUniversidadService\bin\WCF_GestionarUniversidadService.pdb
+D:\SSDD\HAACC\asistente_matricula\WCF_GestionarUniversidadService\obj\Debug\WCF_GestionarUniversidadService.dll
+D:\SSDD\HAACC\asistente_matricula\WCF_GestionarUniversidadService\obj\Debug\WCF_GestionarUniversidadService.pdb

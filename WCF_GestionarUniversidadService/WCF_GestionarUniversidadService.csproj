@@ -60,21 +60,60 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\AlumnoSVC\Alumno.disco" />
+    <None Include="Connected Services\AlumnoSVC\configuration91.svcinfo" />
+    <None Include="Connected Services\AlumnoSVC\configuration.svcinfo" />
+    <None Include="Connected Services\AlumnoSVC\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="AutenticarAlumno.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutenticarAlumno.svc.cs">
+      <DependentUpon>AutenticarAlumno.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AlumnoSVC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="IAutenticarAlumno.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\AlumnoSVC\Alumno.wsdl" />
+    <None Include="Connected Services\AlumnoSVC\Alumno.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AlumnoSVC\Alumno1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AlumnoSVC\Alumno2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AlumnoSVC\Alumno3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\AlumnoSVC\WCF_GestionarUniversidadService.AlumnoSVC.Estudiante.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AlumnoSVC\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
