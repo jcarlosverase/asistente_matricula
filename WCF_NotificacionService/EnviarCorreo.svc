@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WCF_NotificacionService.EnviarCorreo" CodeBehind="EnviarCorreo.svc.cs" %>
