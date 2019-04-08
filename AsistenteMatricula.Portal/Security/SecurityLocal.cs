@@ -6,7 +6,7 @@ namespace AsistenteMatricula.Portal.Security
     using System.Collections.Generic;
     using System.Text.RegularExpressions;
     using System.Web;
-    using UniversidadUsuarioService;
+    using ReportesService;
 
     public class SecurityLocal
     { 
@@ -23,7 +23,7 @@ namespace AsistenteMatricula.Portal.Security
                         return new UniversidadUsuario() { Correo = string.Empty };
                     }
                     else
-                        return System.Web.HttpContext.Current.Session["SessionUsuario"] as AsistenteMatricula.Portal.UniversidadUsuarioService.UniversidadUsuario;
+                        return System.Web.HttpContext.Current.Session["SessionUsuario"] as AsistenteMatricula.Portal.ReportesService.UniversidadUsuario;
                 }
                 catch (Exception)
                 {

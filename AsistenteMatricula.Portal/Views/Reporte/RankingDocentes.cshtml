@@ -4,7 +4,7 @@
 }
 
 <div class="container">
-    <h2>RankingDocentes</h2>
+    <h2>Ranking Docentes</h2>
 
     <div class="row">
         <div class="col-sm-3 form-group">
@@ -18,6 +18,17 @@
         <div class="col-sm-3 form-group">
             <br />
             <input type="button" class="btn btn-primary block full-width m-b" id="btnConsultar" value="Consultar" />
+        </div> 
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 form-group">
+            Correo
+            <input type='text' class='form-control' id='txtCorreo' />
+        </div>
+        <div class="col-sm-3 form-group">
+            <br />
+            <input type="button" class="btn btn-primary block full-width m-b" id="btnEnviar" value="Enviar" />
         </div>
     </div>
     <div class="row">
@@ -29,6 +40,25 @@
     
     $(document).ready(function () {
     });
+    $("#btnEnviar").click(function () {
+        $.ajax({
+            url: '@Url.Action("Enviar", "Reporte")',
+            data: {
+                Correo: $("#txtCorreo").val(),
+            },
+            type: "GET",
+            cache: false,
+            async: true,
+            contentType: "application/json;charset=UTF-8",
+            datatype: "json",
+            success: function (data) {
+                alert(data);
+            },
+            error: function (request, status, error) {
+                alert(error);
+            }
+        });
+    })
     
     $("#btnConsultar").click(function () {
 
@@ -48,10 +78,9 @@
             datatype: "json",
             async: true,
             traditional: true,
-            success: function (data) {
-                $("IndexPartialDiv").html("");
-                $("IndexPartialDiv").html(data);
-                //jQuery('#IndexPartialDiv').hideLoading();
+            success: function (data) { 
+                $("#IndexPartialDiv").html("");
+                $("#IndexPartialDiv").html(data); 
             },
             error: function (request, status, error) {
                 if (request.status == 401) {

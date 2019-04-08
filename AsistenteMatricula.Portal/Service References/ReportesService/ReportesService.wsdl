@@ -21,10 +21,30 @@
   <wsdl:message name="IReportesService_RankingDocentes_OutputMessage">
     <wsdl:part name="parameters" element="tns:RankingDocentesResponse" />
   </wsdl:message>
+  <wsdl:message name="IReportesService_Enviar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Enviar" />
+  </wsdl:message>
+  <wsdl:message name="IReportesService_Enviar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportesService_Autenticacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Autenticacion" />
+  </wsdl:message>
+  <wsdl:message name="IReportesService_Autenticacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticacionResponse" />
+  </wsdl:message>
   <wsdl:portType name="IReportesService">
     <wsdl:operation name="RankingDocentes">
       <wsdl:input wsaw:Action="http://tempuri.org/IReportesService/RankingDocentes" message="tns:IReportesService_RankingDocentes_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IReportesService/RankingDocentesResponse" message="tns:IReportesService_RankingDocentes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Enviar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportesService/Enviar" message="tns:IReportesService_Enviar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportesService/EnviarResponse" message="tns:IReportesService_Enviar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Autenticacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportesService/Autenticacion" message="tns:IReportesService_Autenticacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportesService/AutenticacionResponse" message="tns:IReportesService_Autenticacion_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="CustomBinding_IReportesService" type="tns:IReportesService">
@@ -32,6 +52,24 @@
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="RankingDocentes">
       <soap12:operation soapAction="http://tempuri.org/IReportesService/RankingDocentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Enviar">
+      <soap12:operation soapAction="http://tempuri.org/IReportesService/Enviar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autenticacion">
+      <soap12:operation soapAction="http://tempuri.org/IReportesService/Autenticacion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

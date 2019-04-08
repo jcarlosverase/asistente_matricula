@@ -122,6 +122,115 @@ namespace AsistenteMatricula.Portal.ReportesService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UniversidadUsuario", Namespace="http://schemas.datacontract.org/2004/07/WCF_GestionarReporteService.Dominio")]
+    [System.SerializableAttribute()]
+    public partial class UniversidadUsuario : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ApellidoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContraseniaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CorreoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RUCField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Apellido {
+            get {
+                return this.ApellidoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ApellidoField, value) != true)) {
+                    this.ApellidoField = value;
+                    this.RaisePropertyChanged("Apellido");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Contrasenia {
+            get {
+                return this.ContraseniaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContraseniaField, value) != true)) {
+                    this.ContraseniaField = value;
+                    this.RaisePropertyChanged("Contrasenia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Correo {
+            get {
+                return this.CorreoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CorreoField, value) != true)) {
+                    this.CorreoField = value;
+                    this.RaisePropertyChanged("Correo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RUC {
+            get {
+                return this.RUCField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RUCField, value) != true)) {
+                    this.RUCField = value;
+                    this.RaisePropertyChanged("RUC");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ReportesService.IReportesService")]
     public interface IReportesService {
@@ -131,6 +240,18 @@ namespace AsistenteMatricula.Portal.ReportesService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportesService/RankingDocentes", ReplyAction="http://tempuri.org/IReportesService/RankingDocentesResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<AsistenteMatricula.Portal.ReportesService.Valoracion>> RankingDocentesAsync(System.DateTime FechaInicio, System.DateTime FechaFina);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportesService/Enviar", ReplyAction="http://tempuri.org/IReportesService/EnviarResponse")]
+        void Enviar(string Correo, string Asunto, string Mensaje, byte[] Archivo, string NombreArchivo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportesService/Enviar", ReplyAction="http://tempuri.org/IReportesService/EnviarResponse")]
+        System.Threading.Tasks.Task EnviarAsync(string Correo, string Asunto, string Mensaje, byte[] Archivo, string NombreArchivo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportesService/Autenticacion", ReplyAction="http://tempuri.org/IReportesService/AutenticacionResponse")]
+        AsistenteMatricula.Portal.ReportesService.UniversidadUsuario Autenticacion(string RUC, string Correo, string Contrasenia);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportesService/Autenticacion", ReplyAction="http://tempuri.org/IReportesService/AutenticacionResponse")]
+        System.Threading.Tasks.Task<AsistenteMatricula.Portal.ReportesService.UniversidadUsuario> AutenticacionAsync(string RUC, string Correo, string Contrasenia);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -166,6 +287,22 @@ namespace AsistenteMatricula.Portal.ReportesService {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<AsistenteMatricula.Portal.ReportesService.Valoracion>> RankingDocentesAsync(System.DateTime FechaInicio, System.DateTime FechaFina) {
             return base.Channel.RankingDocentesAsync(FechaInicio, FechaFina);
+        }
+        
+        public void Enviar(string Correo, string Asunto, string Mensaje, byte[] Archivo, string NombreArchivo) {
+            base.Channel.Enviar(Correo, Asunto, Mensaje, Archivo, NombreArchivo);
+        }
+        
+        public System.Threading.Tasks.Task EnviarAsync(string Correo, string Asunto, string Mensaje, byte[] Archivo, string NombreArchivo) {
+            return base.Channel.EnviarAsync(Correo, Asunto, Mensaje, Archivo, NombreArchivo);
+        }
+        
+        public AsistenteMatricula.Portal.ReportesService.UniversidadUsuario Autenticacion(string RUC, string Correo, string Contrasenia) {
+            return base.Channel.Autenticacion(RUC, Correo, Contrasenia);
+        }
+        
+        public System.Threading.Tasks.Task<AsistenteMatricula.Portal.ReportesService.UniversidadUsuario> AutenticacionAsync(string RUC, string Correo, string Contrasenia) {
+            return base.Channel.AutenticacionAsync(RUC, Correo, Contrasenia);
         }
     }
 }

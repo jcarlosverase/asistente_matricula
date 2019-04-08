@@ -22,8 +22,26 @@ namespace AsistenteMatricula.Portal.Controllers
         public ActionResult RankingDocentesFilterValueDataList(DateTime FechaInicio, DateTime FechaFina)
         {
             var Result = new ReportesService.ReportesServiceClient().RankingDocentes(FechaInicio, FechaFina).ToList(); 
+
             return PartialView("RankingDocentesPartial", Result);
         }
 
+        [HttpGet]
+        [SecurityRequired]
+        public ActionResult Enviar(string Correo)
+        {
+            try
+            {
+
+                new ReportesService.ReportesServiceClient().Enviar(Correo, "Ranking de docentes", "Buenas tardes, le enviamos un nuevo reporte sobre los docentes", null, "");
+
+                return Json("Enviado", JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                var x = ex.Message;
+                return Json("Problema en el servidor", JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 }

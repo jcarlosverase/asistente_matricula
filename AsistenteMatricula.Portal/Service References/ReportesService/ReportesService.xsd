@@ -16,4 +16,14 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Valoracion" nillable="true" type="tns:Valoracion" />
+  <xs:complexType name="UniversidadUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UniversidadUsuario" nillable="true" type="tns:UniversidadUsuario" />
 </xs:schema>

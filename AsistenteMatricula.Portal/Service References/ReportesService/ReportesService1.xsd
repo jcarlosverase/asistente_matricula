@@ -16,4 +16,36 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Enviar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Correo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Asunto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Archivo" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="NombreArchivo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Autenticacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Correo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutenticacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF_GestionarReporteService.Dominio" minOccurs="0" name="AutenticacionResult" nillable="true" type="q2:UniversidadUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
