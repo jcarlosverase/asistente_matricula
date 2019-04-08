@@ -1,0 +1,43 @@
+﻿@model List<AsistenteMatricula.Portal.ReportesService.Valoracion>
+
+<div id="IndexPartialDiv">
+    <div class="ibox-content">
+        <div class="table-responsive">
+            <table class="table table-striped" >
+                <thead>
+                    <tr>
+                        <th style="display:none;">IdValoracion</th>
+                        <th>Calificación</th>
+                        <th>Curso</th>
+                        <th>Docente</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td style="display:none">
+                                @Html.DisplayFor(modelItem => item.IdValoracion)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Calificacion)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Curso)
+                            </td> 
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Docente)
+                            </td> 
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fecha)
+                            </td> 
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div> 
+    </div>
+</div>
+

@@ -201,6 +201,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ReporteController.cs" />
     <Compile Include="Dominio\Universidad.cs" />
     <Compile Include="Errores\RepetidoException.cs" />
     <Compile Include="Global.asax.cs">
@@ -214,6 +215,11 @@
     <Compile Include="Security\SecurityNavigationAttribute.cs" />
     <Compile Include="Security\SecurityPrivilege.cs" />
     <Compile Include="Security\SecurityRequiredAttribute.cs" />
+    <Compile Include="Service References\ReportesService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\UniversidadUsuarioService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,9 +253,29 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Service References\ReportesService\AsistenteMatricula.Portal.ReportesService.Valoracion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ReportesService\ReportesService.disco" />
+    <None Include="Service References\ReportesService\configuration91.svcinfo" />
+    <None Include="Service References\ReportesService\configuration.svcinfo" />
+    <None Include="Service References\ReportesService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\UniversidadUsuarioService\AsistenteMatricula.Portal.UniversidadUsuarioService.UniversidadUsuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\ReportesService\ReportesService.wsdl" />
+    <None Include="Service References\ReportesService\ReportesService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportesService\ReportesService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportesService\ReportesService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\UniversidadUsuarioService\UniversidadUsuarioService.disco" />
     <None Include="Service References\UniversidadUsuarioService\configuration91.svcinfo" />
     <None Include="Service References\UniversidadUsuarioService\configuration.svcinfo" />
@@ -290,6 +316,8 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Reporte\RankingDocentes.cshtml" />
+    <Content Include="Views\Reporte\RankingDocentesPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -306,6 +334,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ReportesService\" />
     <WCFMetadataStorage Include="Service References\UniversidadUsuarioService\" />
   </ItemGroup>
   <PropertyGroup>

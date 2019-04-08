@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "RankingDocentes";
+}
+
+<div class="container">
+    <h2>RankingDocentes</h2>
+
+    <div class="row">
+        <div class="col-sm-3 form-group">
+            fecha inicio
+            <input type='date' class='col-md-3 form-control hasDatepicker filtro' id='fechaInicio' />
+        </div>
+        <div class="col-sm-3 form-group">
+            fecha fin
+            <input type='date' class='col-md-3 form-control hasDatepicker filtro' id='fechaInicio' />
+        </div>
+        <div class="col-sm-3 form-group">
+            <br />
+            <input type="button" class="btn btn-primary block full-width m-b" id="btnConsultar" value="Consultar" />
+        </div>
+    </div>
+    <div class="row">
+        @Html.Partial("RankingDocentesPartial")
+    </div>
+</div>    
+
+<script >
+    
+    $(document).ready(function () {
+    });
+    
+    $("#btnConsultar").click(function () {
+
+        CargarReporte();
+    })
+    function CargarReporte()
+    {
+        //jQuery('#IndexPartialDiv').showLoading();
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("RankingDocentesFilterValueDataList", "Reporte")',
+            data: {
+                FechaInicio: $("#fechaInicio").val(),
+                FechaFina: $("#fechaInicio").val(),
+            },
+            contentType: "application/json;charset=UTF-8",
+            datatype: "json",
+            async: true,
+            traditional: true,
+            success: function (data) {
+                $("IndexPartialDiv").html("");
+                $("IndexPartialDiv").html(data);
+                //jQuery('#IndexPartialDiv').hideLoading();
+            },
+            error: function (request, status, error) {
+                if (request.status == 401) {
+                    document.location.href = parameterData.urlError;
+                }
+                if (request.status == 500) {
+
+                    alert(error);
+                }
+                if (request.status == 401) {
+                    document.location.href = CmpGlobalVariableUrl401;
+                }
+            } 
+        });
+
+    }
+</script>
