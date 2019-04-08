@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Iniciar Sesion";
+}
+
+<div>
+    <div>
+        <h1 class="logo-name">Portal </h1>
+    </div>
+    <h3>Asistente Matrícula</h3>
+    <form class="m-t" role="form" action="#">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="RUC" id="txt_Ruc">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Correo" id="txt_Correo" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Contraseña" id="txt_Contrasenia">
+        </div>
+        <input type="button" class="btn btn-primary block full-width m-b" id="btnLogin" value="Iniciar Sesión" />
+        <a href="@Url.Action("ForgotPassword", "cuenta")"><small>¿Se te olvidó tu contraseña?</small></a>
+    </form>
+</div>
+
+
+<script type="text/javascript">
+    $("#btnLogin").click(function () {
+    $.ajax({
+        url: '@Url.Action("Login", "Account")',
+        data: JSON.stringify({
+            Correo: $("#txt_Correo").val(),
+            Contrasenia: $("#txt_Contrasenia").val(),
+            RUC: $("#txt_Ruc").val(),
+        }),
+        type: "POST",
+        cache: false,
+        async: true,
+        contentType: "application/json;charset=UTF-8",
+        datatype: "json",
+        success: function (data) {
+            if (data == "Success") {
+                document.location.href = '@Url.Action("Index", "Home")';
+            }
+            else { 
+                alert(data);
+            }
+        },
+        error: function (request, status, error) {
+            if (request.status == 500) {
+
+                alert(error);
+            }
+            if (request.status == 401) {
+                document.location.href = CmpGlobalVariableUrl401;
+            }
+        }
+    });
+    });
+</script>
