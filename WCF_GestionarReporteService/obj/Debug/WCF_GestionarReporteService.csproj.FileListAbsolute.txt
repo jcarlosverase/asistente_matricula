@@ -1,0 +1,8 @@
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\WCF_GestionarReporteService\bin\WCF_GestionarReporteService.dll.config
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\WCF_GestionarReporteService\bin\WCF_GestionarReporteService.dll
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\WCF_GestionarReporteService\bin\WCF_GestionarReporteService.pdb
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\WCF_GestionarReporteService\bin\AsistenteMatricula.Libreria.dll
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\WCF_GestionarReporteService\bin\AsistenteMatricula.Libreria.pdb
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\WCF_GestionarReporteService\obj\Debug\WCF_GestionarReporteService.csprojResolveAssemblyReference.cache
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\WCF_GestionarReporteService\obj\Debug\WCF_GestionarReporteService.dll
+E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\WCF_GestionarReporteService\obj\Debug\WCF_GestionarReporteService.pdb

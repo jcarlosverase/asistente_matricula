@@ -6,5 +6,6 @@
         public static string ClavePublica = "1024|<RSAKeyValue><Modulus>w7RmiIXIOQGIoVcaSffNyVszOLnM/FMVYZYH2gc4nfrwVO9gt/n3QmYW7MOdXAprYVDk2v0fvgdkqRb3ayxWHOXuNboddaGffCtsNdxZxg5Ss/nOB7Tj321eJwiAxCM7XV/dIjgrlB8bqoRPk1TN/RPmmGAsahQkBnnB5IU/AYU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
 
         public static string ConnectionString_Seguridad { get { return @"Data Source= DSK-SYSTEMS\SQLEXPRESS; DataBase=BD_Seguridad; User Id=sa; Password=123456789*"; } }
+        public static string ConnectionString_Valoracion { get { return @"Data Source= DSK-SYSTEMS\SQLEXPRESS; DataBase=BD_Valoracion; User Id=sa; Password=123456789*"; } }
     }
 }
