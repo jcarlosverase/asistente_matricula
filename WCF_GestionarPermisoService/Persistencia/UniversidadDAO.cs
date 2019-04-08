@@ -17,7 +17,8 @@ namespace WCF_GestionarPermisoService.Persistencia
                 using (SqlCommand comando = new SqlCommand(sql, conexion))
                 {
                     comando.Parameters.Add(new SqlParameter("@RUC", Entidad.RUC));
-                    comando.Parameters.Add(new SqlParameter("@RazonSocial", Entidad.RazonSocial)); 
+                    comando.Parameters.Add(new SqlParameter("@RazonSocial", Entidad.RazonSocial));
+                    comando.ExecuteNonQuery();
                 }
             }
             Creado = Obtener(Entidad.RUC);

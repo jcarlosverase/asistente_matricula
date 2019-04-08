@@ -1,4 +1,4 @@
-﻿using AsistenteMatriculaLibreria;
+﻿using AsistenteMatricula.Libreria;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using WCF_GestionarPermisoService.Dominio;
@@ -11,6 +11,9 @@ namespace WCF_GestionarPermisoService.Persistencia
         public UniversidadUsuario Crear(UniversidadUsuario Entidad)
         {
             UniversidadUsuario Creado = null;
+
+
+
             string sql = "INSERT INTO dbo.UniversidadUsuario VALUES (@Correo, @RUC, @Nombre, @Apellido, @Contrasenia, 1);";
             using (SqlConnection conexion = new SqlConnection(Local.ConnectionString_Seguridad))
             {
@@ -21,7 +24,8 @@ namespace WCF_GestionarPermisoService.Persistencia
                     comando.Parameters.Add(new SqlParameter("@RUC", Entidad.RUC));
                     comando.Parameters.Add(new SqlParameter("@Nombre", Entidad.Nombre));
                     comando.Parameters.Add(new SqlParameter("@Apellido", Entidad.Apellido));
-                    comando.Parameters.Add(new SqlParameter("@Contrasenia", EncryptRSA.Encriptar(Entidad.Contrasenia, Local.ClavePublica) )); 
+                    comando.Parameters.Add(new SqlParameter("@Contrasenia", EncryptRSA.Encriptar(Entidad.Contrasenia, Local.ClavePublica) ));
+                    comando.ExecuteNonQuery();
                 }
             }
             Creado = Obtener(Entidad.Correo);
