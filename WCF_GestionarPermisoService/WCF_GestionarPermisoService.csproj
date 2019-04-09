@@ -90,25 +90,20 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="UniversidadService.svc" />
-    <Content Include="UniversidadUsuarioService.svc" />
+    <Content Include="PermisoService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dominio\Universidad.cs" />
     <Compile Include="Dominio\UniversidadUsuario.cs" />
     <Compile Include="Errores\RepetidoException.cs" />
-    <Compile Include="IUniversidadService.cs" />
-    <Compile Include="IUniversidadUsuarioService.cs" />
+    <Compile Include="IPermisoService.cs" />
     <Compile Include="Local.cs" />
     <Compile Include="Persistencia\UniversidadDAO.cs" />
     <Compile Include="Persistencia\UniversidadUsuarioDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UniversidadService.svc.cs">
-      <DependentUpon>UniversidadService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="UniversidadUsuarioService.svc.cs">
-      <DependentUpon>UniversidadUsuarioService.svc</DependentUpon>
+    <Compile Include="PermisoService.svc.cs">
+      <DependentUpon>PermisoService.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
