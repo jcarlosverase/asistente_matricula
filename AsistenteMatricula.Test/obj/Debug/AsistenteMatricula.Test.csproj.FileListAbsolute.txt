@@ -1,6 +1,0 @@
-E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\AsistenteMatricula.Test\bin\Debug\AsistenteMatricula.Test.dll.config
-E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\AsistenteMatricula.Test\bin\Debug\AsistenteMatricula.Test.dll
-E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\AsistenteMatricula.Test\bin\Debug\AsistenteMatricula.Test.pdb
-E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\AsistenteMatricula.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\AsistenteMatricula.Test\obj\Debug\AsistenteMatricula.Test.dll
-E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\AsistenteMatricula.Test\obj\Debug\AsistenteMatricula.Test.pdb

@@ -53,8 +53,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Errores\RepetidoException.cs" />
-    <Compile Include="Service References\GPUniversidadService\Reference.cs">
+    <Compile Include="Service References\PermisoService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -67,40 +66,43 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\GPUniversidadService\AsistenteMatricula.Test.GPUniversidadService.UniversidadUsuario.datasource">
+    <None Include="Service References\PermisoService\AsistenteMatricula.Test.PermisoService.Universidad.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\GPUniversidadService\UniversidadUsuarioService.wsdl" />
-    <None Include="Service References\GPUniversidadService\UniversidadUsuarioService.xsd">
+    <None Include="Service References\PermisoService\AsistenteMatricula.Test.PermisoService.UniversidadUsuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PermisoService\PermisoService.wsdl" />
+    <None Include="Service References\PermisoService\PermisoService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\GPUniversidadService\UniversidadUsuarioService1.xsd">
+    <None Include="Service References\PermisoService\PermisoService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\GPUniversidadService\UniversidadUsuarioService2.xsd">
+    <None Include="Service References\PermisoService\PermisoService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\GPUniversidadService\UniversidadUsuarioService3.xsd">
+    <None Include="Service References\PermisoService\PermisoService3.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\GPUniversidadService\" />
+    <WCFMetadataStorage Include="Service References\PermisoService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\GPUniversidadService\configuration91.svcinfo" />
+    <None Include="Service References\PermisoService\PermisoService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\GPUniversidadService\configuration.svcinfo" />
+    <None Include="Service References\PermisoService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\GPUniversidadService\Reference.svcmap">
+    <None Include="Service References\PermisoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PermisoService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\GPUniversidadService\UniversidadUsuarioService.disco" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF_GestionarPermisoService.Dominio" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF_GestionarPermisoService.Dominio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Universidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Universidad" nillable="true" type="tns:Universidad" />
+  <xs:complexType name="ArrayOfUniversidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Universidad" nillable="true" type="tns:Universidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUniversidad" nillable="true" type="tns:ArrayOfUniversidad" />
   <xs:complexType name="UniversidadUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="Apellido" nillable="true" type="xs:string" />
