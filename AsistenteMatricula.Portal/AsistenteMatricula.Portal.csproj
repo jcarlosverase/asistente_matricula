@@ -215,7 +215,7 @@
     <Compile Include="Security\SecurityNavigationAttribute.cs" />
     <Compile Include="Security\SecurityPrivilege.cs" />
     <Compile Include="Security\SecurityRequiredAttribute.cs" />
-    <Compile Include="Service References\ReportesService\Reference.cs">
+    <Compile Include="Service References\GestionarReporteService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -223,54 +223,49 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\a.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\loading.gif" />
+    <Content Include="Content\progressbar.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\ai.0.22.9-build00167.js" />
-    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="image\sistema-gestion-desempeno.jpg" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
-    <Content Include="Service References\ReportesService\AsistenteMatricula.Portal.ReportesService.Valoracion.datasource">
+    <Content Include="Scripts\jquery.showLoading.js" />
+    <Content Include="Scripts\jquery.showLoading.min.js" />
+    <Content Include="Scripts\particles.js" />
+    <Content Include="Scripts\particlesapp.js" />
+    <Content Include="Scripts\particlesstats.js" />
+    <Content Include="Service References\GestionarReporteService\AsistenteMatricula.Portal.GestionarReporteService.UniversidadUsuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ReportesService\AsistenteMatricula.Portal.ReportesService.UniversidadUsuario.datasource">
+    <Content Include="Service References\GestionarReporteService\AsistenteMatricula.Portal.GestionarReporteService.Valoracion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\ReportesService\ReportesService.disco" />
-    <None Include="Service References\ReportesService\configuration91.svcinfo" />
-    <None Include="Service References\ReportesService\configuration.svcinfo" />
-    <None Include="Service References\ReportesService\Reference.svcmap">
+    <None Include="Service References\GestionarReporteService\ReportesService.disco" />
+    <None Include="Service References\GestionarReporteService\configuration91.svcinfo" />
+    <None Include="Service References\GestionarReporteService\configuration.svcinfo" />
+    <None Include="Service References\GestionarReporteService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\ReportesService\ReportesService.wsdl" />
-    <None Include="Service References\ReportesService\ReportesService.xsd">
+    <None Include="Service References\GestionarReporteService\ReportesService.wsdl" />
+    <None Include="Service References\GestionarReporteService\ReportesService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ReportesService\ReportesService1.xsd">
+    <None Include="Service References\GestionarReporteService\ReportesService1.wsdl" />
+    <None Include="Service References\GestionarReporteService\ReportesService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ReportesService\ReportesService2.xsd">
+    <None Include="Service References\GestionarReporteService\ReportesService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\GestionarReporteService\ReportesService1.disco" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -296,6 +291,15 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Reporte\RankingDocentes.cshtml" />
     <Content Include="Views\Reporte\RankingDocentesPartial.cshtml" />
+    <None Include="Service References\GestionarReporteService\ReportesService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GestionarReporteService\ReportesService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GestionarReporteService\ReportesService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -306,13 +310,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ReportesService\" />
+    <WCFMetadataStorage Include="Service References\GestionarReporteService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -6,10 +6,8 @@
     @Html.AntiForgeryToken()
 
     <ul class="nav navbar-nav navbar-right">
-        <li>
-            @Html.ActionLink("Hola " + AsistenteMatricula.Portal.Security.SecurityLocal.Usuario.Nombre + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a></li>
+        <li><a href="#" class="navbar-brand a-navbar"  >Hola @AsistenteMatricula.Portal.Security.SecurityLocal.Usuario.Nombre!</a></li> 
+        <li><a href="javascript:document.getElementById('logoutForm').submit()" class="navbar-brand a-navbar"  >Cerrar sesión</a></li>
     </ul>
     }
 } 

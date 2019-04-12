@@ -24,11 +24,11 @@
     <MetadataSource Address="http://localhost:50715/ReportesService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReportesService.disco" MetadataType="Disco" ID="a2c03fcd-4f0f-462a-8e8e-ed43db85ff92" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?disco" />
-    <MetadataFile FileName="ReportesService.xsd" MetadataType="Schema" ID="09396b10-685c-4da6-bd96-62ae722b7940" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?xsd=xsd2" />
-    <MetadataFile FileName="ReportesService.wsdl" MetadataType="Wsdl" ID="cd9e8425-7836-4905-8649-fba612968ebf" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?wsdl" />
-    <MetadataFile FileName="ReportesService1.xsd" MetadataType="Schema" ID="53ad046e-08fc-4615-aa3e-c3e3d93782f0" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?xsd=xsd0" />
-    <MetadataFile FileName="ReportesService2.xsd" MetadataType="Schema" ID="22c4f27d-0925-4a2d-8392-0b7a3808e219" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReportesService1.disco" MetadataType="Disco" ID="954ace3b-2c4f-48ed-b8c7-d83be45b34b0" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?disco" />
+    <MetadataFile FileName="ReportesService3.xsd" MetadataType="Schema" ID="b328f6f6-a791-48a9-a4e2-cd4adea3610f" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReportesService1.wsdl" MetadataType="Wsdl" ID="c419f997-1f7b-495b-87f5-2be5e2f11ce7" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?wsdl" />
+    <MetadataFile FileName="ReportesService4.xsd" MetadataType="Schema" ID="c4db0efa-1151-4b9b-aa23-7270d7c37e4e" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReportesService5.xsd" MetadataType="Schema" ID="84175833-6b74-4d75-9fc8-11100a36c93b" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

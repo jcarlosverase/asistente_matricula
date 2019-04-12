@@ -3,44 +3,59 @@
     ViewBag.Title = "RankingDocentes";
 }
 
-<div class="container">
-    <h2>Ranking Docentes</h2>
-
+<br />
+<br />
+<br />
+<div class="container" id="DivContainer">
+    <p>Ranking Docentes</p>
+    <hr />
     <div class="row">
-        <div class="col-sm-3 form-group">
+        <div class="col-sm-4 col-md-4 form-group">
             fecha inicio
-            <input type='date' class='col-md-3 form-control hasDatepicker filtro' id='fechaInicio' />
+            <input type='date' class='form-control hasDatepicker filtro' id='fechaInicio' />
         </div>
-        <div class="col-sm-3 form-group">
+        <div class="col-sm-4 col-md-4 form-group">
             fecha fin
-            <input type='date' class='col-md-3 form-control hasDatepicker filtro' id='fechaInicio' />
+            <input type='date' class='form-control hasDatepicker filtro' id='fechaInicio' />
         </div>
-        <div class="col-sm-3 form-group">
+        <div class="col-sm-4 col-md-4 form-group">
             <br />
             <input type="button" class="btn btn-primary block full-width m-b" id="btnConsultar" value="Consultar" />
         </div> 
     </div>
 
-    <div class="row">
-        <div class="col-sm-6 form-group">
+    <div class="row" id="Enviar"  >
+        <div class="col-sm-8 col-md-8 form-group">
             Correo
             <input type='text' class='form-control' id='txtCorreo' />
         </div>
-        <div class="col-sm-3 form-group">
+        <div class="col-sm-4 form-group">
             <br />
             <input type="button" class="btn btn-primary block full-width m-b" id="btnEnviar" value="Enviar" />
         </div>
-    </div>
-    <div class="row">
-        @Html.Partial("RankingDocentesPartial")
-    </div>
+    </div> 
+        @Html.Partial("RankingDocentesPartial") 
 </div>    
-
+ 
 <script >
     
     $(document).ready(function () {
     });
     $("#btnEnviar").click(function () {
+
+
+        if ($("#txtCorreo").val() == "" ) {
+            swal({
+                title: "Gestionar reporte",
+                text: "Ingrese correo",
+                type: "warning",
+                showCancelButton: false,
+                confirmButtonText: "OK",
+            });
+            return;
+        }
+
+        jQuery('#DivContainer').showLoading();
         $.ajax({
             url: '@Url.Action("Enviar", "Reporte")',
             data: {
@@ -52,21 +67,56 @@
             contentType: "application/json;charset=UTF-8",
             datatype: "json",
             success: function (data) {
-                alert(data);
+                if (data == "TablaNull") {
+                    swal({
+                        title: "Gestionar reporte",
+                        text: "Se requiere previamente generar el reporte!",
+                        type: "warning",
+                        showCancelButton: false,
+                        confirmButtonText: "OK",
+                    });
+                }
+                else {
+                    swal({
+                        title: "Gestionar reporte",
+                        text: "Correo enviado correctamente",
+                        type: "success",
+                        showCancelButton: false,
+                        confirmButtonText: "OK",
+                    });
+                }
+                jQuery('#DivContainer').hideLoading();
             },
             error: function (request, status, error) {
-                alert(error);
+                swal({
+                    title: "Gestionar reporte",
+                    text: error,
+                    type: "error",
+                    showCancelButton: false,
+                    confirmButtonText: "OK",
+                });
+                jQuery('#DivContainer').hideLoading();
             }
         });
     })
     
     $("#btnConsultar").click(function () {
 
+        if ($("#fechaInicio").val() == "" && $("#fechaInicio").val() == "") {
+            swal({
+                title: "Gestionar reporte",
+                text: "Seleccione fecha inicio y fecha fin",
+                type: "warning",
+                showCancelButton: false,
+                confirmButtonText: "OK",
+            }); 
+            return;
+        }
         CargarReporte();
     })
     function CargarReporte()
     {
-        //jQuery('#IndexPartialDiv').showLoading();
+        jQuery('#DivContainer').showLoading();
         $.ajax({
             type: "GET",
             url: '@Url.Action("RankingDocentesFilterValueDataList", "Reporte")',
@@ -80,15 +130,23 @@
             traditional: true,
             success: function (data) { 
                 $("#IndexPartialDiv").html("");
-                $("#IndexPartialDiv").html(data); 
+                $("#IndexPartialDiv").html(data);
+                jQuery('#DivContainer').hideLoading();
             },
             error: function (request, status, error) {
+                jQuery('#DivContainer').hideLoading();
                 if (request.status == 401) {
                     document.location.href = parameterData.urlError;
                 }
                 if (request.status == 500) {
 
-                    alert(error);
+                    swal({
+                        title: "Gestionar reporte",
+                        text: error,
+                        type: "error",
+                        showCancelButton: false,
+                        confirmButtonText: "OK",
+                    }); 
                 }
                 if (request.status == 401) {
                     document.location.href = CmpGlobalVariableUrl401;

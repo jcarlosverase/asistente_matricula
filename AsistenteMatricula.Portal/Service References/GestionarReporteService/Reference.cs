@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AsistenteMatricula.Portal.ReportesService {
+namespace AsistenteMatricula.Portal.GestionarReporteService {
     using System.Runtime.Serialization;
     using System;
     
@@ -232,14 +232,14 @@ namespace AsistenteMatricula.Portal.ReportesService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ReportesService.IReportesService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="GestionarReporteService.IReportesService")]
     public interface IReportesService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportesService/RankingDocentes", ReplyAction="http://tempuri.org/IReportesService/RankingDocentesResponse")]
-        System.Collections.Generic.List<AsistenteMatricula.Portal.ReportesService.Valoracion> RankingDocentes(System.DateTime FechaInicio, System.DateTime FechaFina);
+        System.Collections.Generic.List<AsistenteMatricula.Portal.GestionarReporteService.Valoracion> RankingDocentes(System.DateTime FechaInicio, System.DateTime FechaFina);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportesService/RankingDocentes", ReplyAction="http://tempuri.org/IReportesService/RankingDocentesResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<AsistenteMatricula.Portal.ReportesService.Valoracion>> RankingDocentesAsync(System.DateTime FechaInicio, System.DateTime FechaFina);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<AsistenteMatricula.Portal.GestionarReporteService.Valoracion>> RankingDocentesAsync(System.DateTime FechaInicio, System.DateTime FechaFina);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportesService/Enviar", ReplyAction="http://tempuri.org/IReportesService/EnviarResponse")]
         void Enviar(string Correo, string Asunto, string Mensaje, byte[] Archivo, string NombreArchivo);
@@ -248,19 +248,19 @@ namespace AsistenteMatricula.Portal.ReportesService {
         System.Threading.Tasks.Task EnviarAsync(string Correo, string Asunto, string Mensaje, byte[] Archivo, string NombreArchivo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportesService/Autenticacion", ReplyAction="http://tempuri.org/IReportesService/AutenticacionResponse")]
-        AsistenteMatricula.Portal.ReportesService.UniversidadUsuario Autenticacion(string RUC, string Correo, string Contrasenia);
+        AsistenteMatricula.Portal.GestionarReporteService.UniversidadUsuario Autenticacion(string RUC, string Correo, string Contrasenia);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportesService/Autenticacion", ReplyAction="http://tempuri.org/IReportesService/AutenticacionResponse")]
-        System.Threading.Tasks.Task<AsistenteMatricula.Portal.ReportesService.UniversidadUsuario> AutenticacionAsync(string RUC, string Correo, string Contrasenia);
+        System.Threading.Tasks.Task<AsistenteMatricula.Portal.GestionarReporteService.UniversidadUsuario> AutenticacionAsync(string RUC, string Correo, string Contrasenia);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IReportesServiceChannel : AsistenteMatricula.Portal.ReportesService.IReportesService, System.ServiceModel.IClientChannel {
+    public interface IReportesServiceChannel : AsistenteMatricula.Portal.GestionarReporteService.IReportesService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ReportesServiceClient : System.ServiceModel.ClientBase<AsistenteMatricula.Portal.ReportesService.IReportesService>, AsistenteMatricula.Portal.ReportesService.IReportesService {
+    public partial class ReportesServiceClient : System.ServiceModel.ClientBase<AsistenteMatricula.Portal.GestionarReporteService.IReportesService>, AsistenteMatricula.Portal.GestionarReporteService.IReportesService {
         
         public ReportesServiceClient() {
         }
@@ -281,11 +281,11 @@ namespace AsistenteMatricula.Portal.ReportesService {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.Generic.List<AsistenteMatricula.Portal.ReportesService.Valoracion> RankingDocentes(System.DateTime FechaInicio, System.DateTime FechaFina) {
+        public System.Collections.Generic.List<AsistenteMatricula.Portal.GestionarReporteService.Valoracion> RankingDocentes(System.DateTime FechaInicio, System.DateTime FechaFina) {
             return base.Channel.RankingDocentes(FechaInicio, FechaFina);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<AsistenteMatricula.Portal.ReportesService.Valoracion>> RankingDocentesAsync(System.DateTime FechaInicio, System.DateTime FechaFina) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<AsistenteMatricula.Portal.GestionarReporteService.Valoracion>> RankingDocentesAsync(System.DateTime FechaInicio, System.DateTime FechaFina) {
             return base.Channel.RankingDocentesAsync(FechaInicio, FechaFina);
         }
         
@@ -297,11 +297,11 @@ namespace AsistenteMatricula.Portal.ReportesService {
             return base.Channel.EnviarAsync(Correo, Asunto, Mensaje, Archivo, NombreArchivo);
         }
         
-        public AsistenteMatricula.Portal.ReportesService.UniversidadUsuario Autenticacion(string RUC, string Correo, string Contrasenia) {
+        public AsistenteMatricula.Portal.GestionarReporteService.UniversidadUsuario Autenticacion(string RUC, string Correo, string Contrasenia) {
             return base.Channel.Autenticacion(RUC, Correo, Contrasenia);
         }
         
-        public System.Threading.Tasks.Task<AsistenteMatricula.Portal.ReportesService.UniversidadUsuario> AutenticacionAsync(string RUC, string Correo, string Contrasenia) {
+        public System.Threading.Tasks.Task<AsistenteMatricula.Portal.GestionarReporteService.UniversidadUsuario> AutenticacionAsync(string RUC, string Correo, string Contrasenia) {
             return base.Channel.AutenticacionAsync(RUC, Correo, Contrasenia);
         }
     }
