@@ -25,8 +25,7 @@ namespace AsistenteMatricula.Portal.Controllers
         [HttpGet]
         [SecurityRequired]
         public ActionResult RankingDocentesFilterValueDataList(DateTime FechaInicio, DateTime FechaFina)
-        {
-            _cache.Set("RankingDocentesPartial", null, new CacheItemPolicy() { AbsoluteExpiration = DateTime.Now.AddDays(+1) });
+        { 
             var Result = new GestionarReporteService.ReportesServiceClient().RankingDocentes(FechaInicio, FechaFina).ToList();
 
             _cache.Set("RankingDocentesPartial", Result, new CacheItemPolicy() { AbsoluteExpiration = DateTime.Now.AddDays(+1) });
@@ -49,9 +48,8 @@ namespace AsistenteMatricula.Portal.Controllers
                 return Json("Enviado", JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
-            {
-                var x = ex.Message;
-                throw;
+            { 
+                return Json(ex.Message, JsonRequestBehavior.AllowGet);
             }
         }
         public byte[] WriteCSV<T>(IEnumerable<T> items)

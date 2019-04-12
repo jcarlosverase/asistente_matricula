@@ -76,11 +76,20 @@
                         confirmButtonText: "OK",
                     });
                 }
-                else {
+                else if (data == "Enviado") {
                     swal({
                         title: "Gestionar reporte",
                         text: "Correo enviado correctamente",
                         type: "success",
+                        showCancelButton: false,
+                        confirmButtonText: "OK",
+                    });
+                }
+                else {
+                    swal({
+                        title: "Gestionar reporte",
+                        text: data,
+                        type: "error",
                         showCancelButton: false,
                         confirmButtonText: "OK",
                     });

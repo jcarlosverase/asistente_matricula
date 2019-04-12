@@ -21,14 +21,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:50715/ReportesService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://sharedcss.com/haacc/WCF_GestionarReporteService/ReportesService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReportesService1.disco" MetadataType="Disco" ID="954ace3b-2c4f-48ed-b8c7-d83be45b34b0" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?disco" />
-    <MetadataFile FileName="ReportesService3.xsd" MetadataType="Schema" ID="b328f6f6-a791-48a9-a4e2-cd4adea3610f" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?xsd=xsd2" />
-    <MetadataFile FileName="ReportesService1.wsdl" MetadataType="Wsdl" ID="c419f997-1f7b-495b-87f5-2be5e2f11ce7" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?wsdl" />
-    <MetadataFile FileName="ReportesService4.xsd" MetadataType="Schema" ID="c4db0efa-1151-4b9b-aa23-7270d7c37e4e" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?xsd=xsd0" />
-    <MetadataFile FileName="ReportesService5.xsd" MetadataType="Schema" ID="84175833-6b74-4d75-9fc8-11100a36c93b" SourceId="1" SourceUrl="http://localhost:50715/ReportesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReportesService3.xsd" MetadataType="Schema" ID="9efc5199-b7c6-41a5-bf12-b626078db148" SourceId="1" SourceUrl="http://sharedcss.com/haacc/WCF_GestionarReporteService/ReportesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReportesService4.xsd" MetadataType="Schema" ID="8dae6f21-67bf-4315-97da-87c70a352882" SourceId="1" SourceUrl="http://sharedcss.com/haacc/WCF_GestionarReporteService/ReportesService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReportesService1.disco" MetadataType="Disco" ID="bbba01de-9bba-441f-88b4-eb7297853a46" SourceId="1" SourceUrl="http://sharedcss.com/haacc/WCF_GestionarReporteService/ReportesService.svc?disco" />
+    <MetadataFile FileName="ReportesService1.wsdl" MetadataType="Wsdl" ID="aa80b4df-2022-4e8a-b1c9-e91e8d9fe2c3" SourceId="1" SourceUrl="http://sharedcss.com/haacc/WCF_GestionarReporteService/ReportesService.svc?wsdl" />
+    <MetadataFile FileName="ReportesService5.xsd" MetadataType="Schema" ID="9191b5cc-aebe-4543-9386-2f07b7994f00" SourceId="1" SourceUrl="http://sharedcss.com/haacc/WCF_GestionarReporteService/ReportesService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

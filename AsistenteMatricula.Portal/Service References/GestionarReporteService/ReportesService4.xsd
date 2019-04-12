@@ -1,51 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:50715/ReportesService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_GestionarReporteService.Dominio" />
-  <xs:element name="RankingDocentes">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="FechaFina" type="xs:dateTime" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RankingDocentesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF_GestionarReporteService.Dominio" minOccurs="0" name="RankingDocentesResult" nillable="true" type="q1:ArrayOfValoracion" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Enviar">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Correo" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Asunto" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Archivo" nillable="true" type="xs:base64Binary" />
-        <xs:element minOccurs="0" name="NombreArchivo" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="EnviarResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Autenticacion">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Correo" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AutenticacionResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF_GestionarReporteService.Dominio" minOccurs="0" name="AutenticacionResult" nillable="true" type="q2:UniversidadUsuario" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF_GestionarReporteService.Dominio" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF_GestionarReporteService.Dominio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfValoracion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Valoracion" nillable="true" type="tns:Valoracion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValoracion" nillable="true" type="tns:ArrayOfValoracion" />
+  <xs:complexType name="Valoracion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Calificacion" type="xs:int" />
+      <xs:element minOccurs="0" name="Curso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Docente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdValoracion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Valoracion" nillable="true" type="tns:Valoracion" />
+  <xs:complexType name="UniversidadUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UniversidadUsuario" nillable="true" type="tns:UniversidadUsuario" />
 </xs:schema>
