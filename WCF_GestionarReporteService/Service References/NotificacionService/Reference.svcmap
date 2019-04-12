@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:64075/EnviarCorreo.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://sharedcss.com/haacc/WCF_NotificacionService/EnviarCorreo.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EnviarCorreo.disco" MetadataType="Disco" ID="3770532c-0912-46c7-94d6-560ec87b1399" SourceId="1" SourceUrl="http://localhost:64075/EnviarCorreo.svc?disco" />
-    <MetadataFile FileName="EnviarCorreo.xsd" MetadataType="Schema" ID="9d9584bf-7ac1-47b3-9c7a-14685bb0d6eb" SourceId="1" SourceUrl="http://localhost:64075/EnviarCorreo.svc?xsd=xsd0" />
-    <MetadataFile FileName="EnviarCorreo.wsdl" MetadataType="Wsdl" ID="c86a924a-a164-4031-8edd-10697e496213" SourceId="1" SourceUrl="http://localhost:64075/EnviarCorreo.svc?wsdl" />
-    <MetadataFile FileName="EnviarCorreo1.xsd" MetadataType="Schema" ID="38901712-1ee9-4265-a52b-9338f75aca01" SourceId="1" SourceUrl="http://localhost:64075/EnviarCorreo.svc?xsd=xsd1" />
+    <MetadataFile FileName="EnviarCorreo2.xsd" MetadataType="Schema" ID="b5b620ee-31da-43aa-91fe-19fd7ffca7f4" SourceId="1" SourceUrl="http://sharedcss.com/haacc/WCF_NotificacionService/EnviarCorreo.svc?xsd=xsd0" />
+    <MetadataFile FileName="EnviarCorreo1.disco" MetadataType="Disco" ID="01a878c1-24dc-427b-a811-a0693bf3502f" SourceId="1" SourceUrl="http://sharedcss.com/haacc/WCF_NotificacionService/EnviarCorreo.svc?disco" />
+    <MetadataFile FileName="EnviarCorreo1.wsdl" MetadataType="Wsdl" ID="1c8ed92f-ac09-473e-8ae8-fbab623b9323" SourceId="1" SourceUrl="http://sharedcss.com/haacc/WCF_NotificacionService/EnviarCorreo.svc?wsdl" />
+    <MetadataFile FileName="EnviarCorreo21.xsd" MetadataType="Schema" ID="3a88e4ce-2c36-4cb7-bdf1-76672bcf3564" SourceId="1" SourceUrl="http://sharedcss.com/haacc/WCF_NotificacionService/EnviarCorreo.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
