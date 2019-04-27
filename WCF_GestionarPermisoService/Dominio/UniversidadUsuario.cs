@@ -7,10 +7,12 @@ namespace WCF_GestionarPermisoService.Dominio
     public class UniversidadUsuario
     {
         [DataMember]
-        public string Correo { get; set; }
-
+        public int IdUniversidadUsuario { get; set; }
         [DataMember]
-        public string RUC { get; set; }
+        public Universidad Universidad { get; set; }
+        [DataMember]
+        public string Correo { get; set; }
+         
         [DataMember]
         public string Nombre { get; set; }
         [DataMember]

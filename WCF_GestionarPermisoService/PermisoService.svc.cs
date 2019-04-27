@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 using WCF_GestionarPermisoService.Dominio;
 using WCF_GestionarPermisoService.Errores;
@@ -19,23 +20,31 @@ namespace WCF_GestionarPermisoService
             var DAO = new UniversidadDAO();
             if (DAO.Obtener(Parametro.RUC) != null) // Ya existe
             {
-                throw new FaultException<RepetidoException>
+                throw new WebFaultException<RepetidoException>
                     (
                         new RepetidoException()
                         {
                             Codigo = "101",
                             Descripcion = "El RUC ya existe"
                         },
-                        new FaultReason("Error al intentar creación")
-                    );
+                        System.Net.HttpStatusCode.Conflict
+                    ); 
             }
             return DAO.Crear(Parametro);
         }
 
-        public void UniversidadEliminar(string RUC)
+        public string UniversidadEliminar(string IdUniversidad)
         {
-            var DAO = new UniversidadDAO();
-            DAO.Eliminar(RUC);
+            try
+            {
+                var DAO = new UniversidadDAO();
+                DAO.Eliminar(IdUniversidad);
+                return "exitoso";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
         public List<Universidad> UniversidadListar()
@@ -64,29 +73,29 @@ namespace WCF_GestionarPermisoService
             var DAO = new UniversidadUsuarioDAO();
             if (DAO.Obtener(Parametro.Correo) != null) // Ya existe
             {
-                throw new FaultException<RepetidoException>
+                throw new WebFaultException<RepetidoException>
                     (
                         new RepetidoException()
                         {
-                            Codigo = "101",
+                            Codigo = "409",
                             Descripcion = "El Correo ya existe"
                         },
-                        new FaultReason("Error al intentar creación")
+                        System.Net.HttpStatusCode.Conflict
                     );
             }
             return DAO.Crear(Parametro);
         }
 
-        public void UniversidadUsuarioEliminar(string Correo)
+        public void UniversidadUsuarioEliminar(string IdUniversidadUsuario)
         {
             var DAO = new UniversidadUsuarioDAO();
-            DAO.Eliminar(Correo);
+            DAO.Eliminar(IdUniversidadUsuario);
         }
 
-        public List<UniversidadUsuario> UniversidadUsuarioListar()
+        public List<UniversidadUsuario> UniversidadUsuarioListar(string IdUniversidad)
         {
             var DAO = new UniversidadUsuarioDAO();
-            return DAO.Listar();
+            return DAO.Listar(IdUniversidad);
         }
 
         public UniversidadUsuario UniversidadUsuarioModificar(UniversidadUsuario Parametro)
@@ -95,10 +104,10 @@ namespace WCF_GestionarPermisoService
             return DAO.Modificar(Parametro);
         }
 
-        public UniversidadUsuario UniversidadUsuarioObtener(string Correo)
+        public UniversidadUsuario UniversidadUsuarioObtener(string IdUniversidadUsuario)
         {
             var DAO = new UniversidadUsuarioDAO();
-            return DAO.Obtener(Correo);
+            return DAO.Obtener(IdUniversidadUsuario);
         }
         #endregion
     }
