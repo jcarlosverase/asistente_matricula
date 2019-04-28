@@ -1,0 +1,7 @@
+D:\Workspace\DSD\asistente_matricula\WCF_ValoracionService\bin\WCF_ValoracionService.dll.config
+D:\Workspace\DSD\asistente_matricula\WCF_ValoracionService\bin\WCF_ValoracionService.dll
+D:\Workspace\DSD\asistente_matricula\WCF_ValoracionService\bin\WCF_ValoracionService.pdb
+D:\Workspace\DSD\asistente_matricula\WCF_ValoracionService\obj\Debug\WCF_ValoracionService.csprojAssemblyReference.cache
+D:\Workspace\DSD\asistente_matricula\WCF_ValoracionService\obj\Debug\WCF_ValoracionService.csproj.CoreCompileInputs.cache
+D:\Workspace\DSD\asistente_matricula\WCF_ValoracionService\obj\Debug\WCF_ValoracionService.dll
+D:\Workspace\DSD\asistente_matricula\WCF_ValoracionService\obj\Debug\WCF_ValoracionService.pdb
