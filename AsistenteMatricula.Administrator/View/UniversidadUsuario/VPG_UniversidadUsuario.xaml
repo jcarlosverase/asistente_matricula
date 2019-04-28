@@ -1,0 +1,128 @@
+﻿<Page x:Class="AsistenteMatricula.Administrator.View.UniversidadUsuario.VPG_UniversidadUsuario"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:Ctrls="http://metro.mahapps.com/winfx/xaml/controls"  
+                             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                             xmlns:system="clr-namespace:System;assembly=mscorlib"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="850"
+      Title="PG_Main"> 
+    <materialDesign:DialogHost IsOpen="{Binding IsOpenDialogHost}">
+        <materialDesign:DialogHost.DialogContent>
+            <StackPanel Margin="16" Width="350">
+                <TextBlock TextWrapping="Wrap" Text="{Binding DialogHostMessage}"></TextBlock>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" IsDefault="True" Margin="0 8 8 0" Command="{Binding ICloseDialogHost}">
+                        <Button.CommandParameter>
+                            <system:Boolean>True</system:Boolean>
+                        </Button.CommandParameter>
+                        Entiendo
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </materialDesign:DialogHost.DialogContent>
+        <Border ClipToBounds="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Height="Auto" Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel  Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,0,0" Orientation="Horizontal"
+                             DataContext="{Binding EUniversidad}">
+                        <TextBlock Text="Usuarios de la empresa: " Foreground="Black"   FontSize="14" FontFamily="Calibri Light"/>
+                        <TextBlock Text="{Binding RazonSocial}" Foreground="Gray"   FontSize="14" FontFamily="Calibri Light"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Bottom">
+                        <Ctrls:MetroProgressBar Background="#00FFFFFF" VerticalAlignment="Top" Foreground="Gray"  IsIndeterminate="{Binding IsIndeterminate}" />
+                    </StackPanel>
+
+                    <Button Style="{DynamicResource StyleButtonActualizar}" Command="{Binding IActualizar}" /> 
+
+                    <Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource StyleButtonNuevo}" 
+                            Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}, Path=DataContext.INew}"
+                            Margin="5,0,5,0" />
+                    <!--<StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal">
+                <Button Style="{DynamicResource StyleButtonNuevo}" 
+                            Command="{Binding INew}" Margin="0,0,0,0" />
+            </StackPanel>-->
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0" Margin="5">
+                    <Grid.Resources>
+                        <ResourceDictionary>
+                            <Style TargetType="{x:Type ListViewItem}">
+                                <Setter Setter.Property="Control.Template">
+                                    <Setter.Value>
+                                        <ControlTemplate ControlTemplate.TargetType="{x:Type ListViewItem}">
+                                            <Grid >
+                                                <Border x:Name="Brd" Margin="5" Height="Auto" Width="150"
+                                                Background="White"  BorderThickness="1" BorderBrush="#E0E0E0" >
+                                                    <Grid>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+
+                                                        <Grid Grid.Row="0" Grid.Column="1" >
+                                                            <Image Grid.Row="0" Grid.Column="0" Width="50" Height="50" Margin="0,5,0,0" Source="/AsistenteMatricula.Administrator;component/Image/avatar.png"  />
+                                                            <materialDesign:PopupBox Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource MaterialDesignToolPopupBox}" 
+                                                                                 HorizontalAlignment="Right"  VerticalAlignment="Top">
+                                                                <StackPanel >
+                                                                    <Button Style="{DynamicResource YamilaStyleButtonEditar}" Content="Editar"
+                                                                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}, Path=DataContext.IEdit}"
+                                                                    CommandParameter="{Binding .}"/> 
+                                                                    <Button Style="{DynamicResource YamilaStyleButtonEliminar}"  Content="Eliminar"
+                                                                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}, Path=DataContext.IDelete}"
+                                                                    CommandParameter="{Binding .}"/>
+                                                                </StackPanel>
+                                                            </materialDesign:PopupBox>
+                                                        </Grid>
+                                                        <Grid Grid.Row="1" Grid.Column="0">
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition />
+                                                                <ColumnDefinition Width="Auto"/>
+                                                            </Grid.ColumnDefinitions>
+
+                                                            <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Margin="0">
+                                                                <TextBlock  Margin="5,5,5,0"  
+                                                                    Foreground="Gray" FontSize="11"
+                                                                    Text="{Binding Nombre}"  />
+                                                                <TextBlock  Margin="5,0,0,5"  FontFamily="Calibri Light"
+                                                               Foreground="Black" FontSize="12"
+                                                               Text="{Binding Correo}"  />
+                                                            </StackPanel>
+                                                        </Grid>
+                                                        <!--<Separator VerticalAlignment="Bottom" Grid.Row="1" Background="{DynamicResource AccentColorBrush}"/>-->
+                                                    </Grid>
+                                                </Border>
+                                            </Grid>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Trigger.Property="UIElement.IsMouseOver" Trigger.Value="True">
+                                                    <Setter Setter.TargetName="Brd" Setter.Value="#e6e5e5" Setter.Property="Border.Background" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ResourceDictionary>
+                    </Grid.Resources>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ListView ItemsSource="{Binding CollectionData}" />
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+        </Border>
+    </materialDesign:DialogHost>
+</Page>
