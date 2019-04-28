@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c51617e7-a8e4-4a11-a00f-dc6a1bf17937" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:64033/ValoracionService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ValoracionService.wsdl" MetadataType="Wsdl" ID="50879c46-a731-4dbf-b8fd-25ea7fe5597a" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?wsdl" />
+    <MetadataFile FileName="ValoracionService.xsd" MetadataType="Schema" ID="dab7204e-8d6b-46eb-82d8-8ebd2b750ca6" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ValoracionService1.xsd" MetadataType="Schema" ID="0d281054-0534-41ce-b050-551ed380dcaf" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ValoracionService.disco" MetadataType="Disco" ID="1a0aaa55-7fb6-4cdd-ad08-1ddf216d0765" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?disco" />
+    <MetadataFile FileName="ValoracionService2.xsd" MetadataType="Schema" ID="903528b9-1b00-483b-8598-18f858a58b2a" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ValoracionService3.xsd" MetadataType="Schema" ID="fb2e016c-9598-452d-907e-e6f8be41b65b" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

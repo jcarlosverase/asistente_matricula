@@ -1,0 +1,7 @@
+D:\Workspace\DSD\asistente_matricula\WCF_GestionarAsistenteService\bin\WCF_GestionarAsistenteService.dll.config
+D:\Workspace\DSD\asistente_matricula\WCF_GestionarAsistenteService\bin\WCF_GestionarAsistenteService.dll
+D:\Workspace\DSD\asistente_matricula\WCF_GestionarAsistenteService\bin\WCF_GestionarAsistenteService.pdb
+D:\Workspace\DSD\asistente_matricula\WCF_GestionarAsistenteService\obj\Debug\WCF_GestionarAsistenteService.csprojAssemblyReference.cache
+D:\Workspace\DSD\asistente_matricula\WCF_GestionarAsistenteService\obj\Debug\WCF_GestionarAsistenteService.csproj.CoreCompileInputs.cache
+D:\Workspace\DSD\asistente_matricula\WCF_GestionarAsistenteService\obj\Debug\WCF_GestionarAsistenteService.dll
+D:\Workspace\DSD\asistente_matricula\WCF_GestionarAsistenteService\obj\Debug\WCF_GestionarAsistenteService.pdb
