@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="79ba2b4b-d83b-49a0-92ea-59da65a58063" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://amaws01.azurewebsites.net/CursoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CursoService.xsd" MetadataType="Schema" ID="ba82ed99-f7c6-42d5-b2ca-65234a66164a" SourceId="1" SourceUrl="https://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CursoService1.xsd" MetadataType="Schema" ID="47f54372-7101-48c8-a7f3-b8278552e7f0" SourceId="1" SourceUrl="https://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CursoService.wsdl" MetadataType="Wsdl" ID="2fbe4f7c-d1e5-4b6a-8ea8-80cfb0c81d03" SourceId="1" SourceUrl="https://amaws01.azurewebsites.net/CursoService.svc?wsdl" />
+    <MetadataFile FileName="CursoService2.xsd" MetadataType="Schema" ID="7149d0f6-e814-481e-ab26-da69006e601e" SourceId="1" SourceUrl="https://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CursoService3.xsd" MetadataType="Schema" ID="3d4d6e76-1dde-4be4-89dd-03054055c7ab" SourceId="1" SourceUrl="https://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CursoService.disco" MetadataType="Disco" ID="15f785ab-2306-4808-a251-b6f04befc62a" SourceId="1" SourceUrl="https://amaws01.azurewebsites.net/CursoService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
