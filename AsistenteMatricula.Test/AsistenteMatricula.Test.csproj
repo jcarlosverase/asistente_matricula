@@ -35,33 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Logging, Version=2.1.2.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="IronSharp.Core, Version=2013.11.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Iron.IronCore.3.0.9\lib\IronSharp.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="IronSharp.IronMQ, Version=2013.11.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Iron.IronMQ.3.0.13\lib\IronSharp.IronMQ.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MessageBird, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MessageBird.1.5.0\lib\net40\MessageBird.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
@@ -79,23 +53,56 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Dominio\BDValoracion\Valoracion.cs" />
-    <Compile Include="Dominio\DBSeguridad\Universidad.cs" />
-    <Compile Include="UnitTestMensajeria.cs" />
-    <Compile Include="UnitTestGestionarPermisoService.cs" />
-    <Compile Include="Local.cs" />
+    <Compile Include="Service References\PermisoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AsistenteMatricula.Libreria\AsistenteMatricula.Libreria.csproj">
-      <Project>{d6072554-6992-4feb-90d3-5e1b680d5084}</Project>
-      <Name>AsistenteMatricula.Libreria</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="iron.json" />
-    <None Include="packages.config" />
+    <None Include="Service References\PermisoService\AsistenteMatricula.Test.PermisoService.Universidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PermisoService\AsistenteMatricula.Test.PermisoService.UniversidadUsuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PermisoService\PermisoService.wsdl" />
+    <None Include="Service References\PermisoService\PermisoService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PermisoService\PermisoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PermisoService\PermisoService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PermisoService\PermisoService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PermisoService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PermisoService\PermisoService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PermisoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PermisoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PermisoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

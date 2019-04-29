@@ -1,7 +1,0 @@
-D:\Workspace\DSD\asistente_matricula\WCF_CursoService\bin\WCF_CursoService.dll.config
-D:\Workspace\DSD\asistente_matricula\WCF_CursoService\bin\WCF_CursoService.dll
-D:\Workspace\DSD\asistente_matricula\WCF_CursoService\bin\WCF_CursoService.pdb
-D:\Workspace\DSD\asistente_matricula\WCF_CursoService\obj\Debug\WCF_CursoService.csproj.CoreCompileInputs.cache
-D:\Workspace\DSD\asistente_matricula\WCF_CursoService\obj\Debug\WCF_CursoService.dll
-D:\Workspace\DSD\asistente_matricula\WCF_CursoService\obj\Debug\WCF_CursoService.pdb
-D:\Workspace\DSD\asistente_matricula\WCF_CursoService\obj\Debug\WCF_CursoService.csprojAssemblyReference.cache

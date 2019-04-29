@@ -1,7 +1,0 @@
-D:\Workspace\DSD\asistente_matricula\WCF_GestionarUniversidadService\bin\WCF_GestionarUniversidadService.dll.config
-D:\Workspace\DSD\asistente_matricula\WCF_GestionarUniversidadService\bin\WCF_GestionarUniversidadService.dll
-D:\Workspace\DSD\asistente_matricula\WCF_GestionarUniversidadService\bin\WCF_GestionarUniversidadService.pdb
-D:\Workspace\DSD\asistente_matricula\WCF_GestionarUniversidadService\obj\Debug\WCF_GestionarUniversidadService.csprojAssemblyReference.cache
-D:\Workspace\DSD\asistente_matricula\WCF_GestionarUniversidadService\obj\Debug\WCF_GestionarUniversidadService.csproj.CoreCompileInputs.cache
-D:\Workspace\DSD\asistente_matricula\WCF_GestionarUniversidadService\obj\Debug\WCF_GestionarUniversidadService.dll
-D:\Workspace\DSD\asistente_matricula\WCF_GestionarUniversidadService\obj\Debug\WCF_GestionarUniversidadService.pdb

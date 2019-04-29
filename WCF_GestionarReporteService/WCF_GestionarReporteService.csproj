@@ -62,20 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ReportesService.svc" />
+    <None Include="Service References\NotificacionService\EnviarCorreo.disco" />
     <None Include="Service References\NotificacionService\configuration91.svcinfo" />
     <None Include="Service References\NotificacionService\configuration.svcinfo" />
-    <None Include="Service References\NotificacionService\EnviarCorreo1.wsdl" />
-    <None Include="Service References\NotificacionService\EnviarCorreo2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\NotificacionService\EnviarCorreo21.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\NotificacionService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\NotificacionService\EnviarCorreo1.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +93,13 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\NotificacionService\EnviarCorreo.wsdl" />
+    <None Include="Service References\NotificacionService\EnviarCorreo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NotificacionService\EnviarCorreo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

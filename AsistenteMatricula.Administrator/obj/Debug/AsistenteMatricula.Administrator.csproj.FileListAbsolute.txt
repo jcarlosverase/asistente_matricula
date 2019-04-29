@@ -1,1 +1,0 @@
-E:\MegAsync Abel Quispe\EPE\Desarrollo para Sistemas Distribuidos\TF\asistente_matricula\AsistenteMatricula.Administrator\bin\Debug\AsistenteMatricula.Administrator.exe.config

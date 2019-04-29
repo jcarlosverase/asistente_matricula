@@ -30,7 +30,7 @@ namespace AsistenteMatricula.Portal.Controllers
             {
 
 
-                var instLocal = new GestionarReporteService.ReportesServiceClient().Autenticacion(RUC, Correo, Contrasenia);
+                var instLocal = new ReportesService.ReportesServiceClient().Autenticacion(RUC, Correo, Contrasenia);
                 if (instLocal != null)
                 {
                     System.Web.HttpContext.Current.Session["SessionIsAuthenticated"] = true;

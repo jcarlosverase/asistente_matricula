@@ -1,7 +1,0 @@
-﻿<%@ ServiceHost 
-    Language="C#" 
-    Debug="true" 
-    Service="WCF_GestionarUniversidadService.GestionarUniversidadService" 
-    CodeBehind="GestionarUniversidadService.svc.cs" 
-    Factory="System.ServiceModel.Activation.WebServiceHostFactory"
-    %>

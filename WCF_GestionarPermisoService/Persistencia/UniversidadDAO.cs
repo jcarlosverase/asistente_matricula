@@ -20,78 +20,62 @@ namespace WCF_GestionarPermisoService.Persistencia
                     comando.Parameters.Add(new SqlParameter("@RazonSocial", Entidad.RazonSocial));
                     comando.ExecuteNonQuery();
                 }
-            } 
+            }
+            Creado = Obtener(Entidad.RUC);
             return Creado;
         }
         public Universidad Obtener(string RUC)
         {
             Universidad Encontrado = null;
-            try
+            string sql = "SELECT * FROM dbo.Universidad WHERE RUC = @RUC";
+            using (SqlConnection conexion = new SqlConnection(Local.ConnectionString_Seguridad))
             {
-                string sql = "SELECT * FROM dbo.Universidad WHERE RUC=@RUC";
-                using (SqlConnection conexion = new SqlConnection(Local.ConnectionString_Seguridad))
+                conexion.Open();
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
                 {
-                    conexion.Open();
-                    using (SqlCommand comando = new SqlCommand(sql, conexion))
+                    comando.Parameters.Add(new SqlParameter("@RUC", RUC));
+                    using (SqlDataReader resultado = comando.ExecuteReader())
                     {
-                        comando.Parameters.Add(new SqlParameter("@RUC", RUC));
-                        using (SqlDataReader resultado = comando.ExecuteReader())
+                        if (resultado.Read())
                         {
-                            if (resultado.Read())
+                            Encontrado = new Universidad()
                             {
-                                Encontrado = new Universidad()
-                                {
-                                    IdUniversidad = (int)resultado["IdUniversidad"],
-                                    RUC = (string)resultado["RUC"],
-                                    RazonSocial = (string)resultado["RazonSocial"],
-                                };
-                            }
+                                RUC = (string)resultado["RUC"],
+                                RazonSocial = (string)resultado["RazonSocial"], 
+                            };
                         }
                     }
                 }
-            }
-            catch (System.Exception ex)
-            {
-                var ms = ex.Message;
             }
             return Encontrado;
         }
          
         public Universidad Modificar(Universidad Entidad)
         {
-                Universidad Modificado = null;
-            try
-            {
-                string sql = "UPDATE dbo.Universidad SET RazonSocial=@RazonSocial , RUC=@RUC WHERE IdUniversidad=@IdUniversidad";
-                using (SqlConnection conexion = new SqlConnection(Local.ConnectionString_Seguridad))
-                {
-                    conexion.Open();
-                    using (SqlCommand comando = new SqlCommand(sql, conexion))
-                    {
-                        comando.Parameters.Add(new SqlParameter("@RazonSocial", Entidad.RazonSocial));
-                        comando.Parameters.Add(new SqlParameter("@IdUniversidad", Entidad.IdUniversidad.ToString()));
-                        comando.Parameters.Add(new SqlParameter("@RUC", Entidad.RUC));
-                        comando.ExecuteNonQuery();
-                    }
-                }
-                Modificado = Entidad;
-            }
-            catch (System.Exception ex)
-            {
-                var ms = ex.Message;
-            }
-            return Modificado;
-        }
-
-        public void Eliminar(string IdUniversidad)
-        {
-            string sql = "UPDATE dbo.Universidad SET FlgActivo=@FlgActivo WHERE IdUniversidad=@IdUniversidad";
+            Universidad Modificado = null;
+            string sql = "UPDATE dbo.Universidad SET RazonSocial=@RazonSocial WHERE RUC=@RUC";
             using (SqlConnection conexion = new SqlConnection(Local.ConnectionString_Seguridad))
             {
                 conexion.Open();
                 using (SqlCommand comando = new SqlCommand(sql, conexion))
                 {
-                    comando.Parameters.Add(new SqlParameter("@IdUniversidad", System.Data.SqlDbType.Int, 0, IdUniversidad)); 
+                    comando.Parameters.Add(new SqlParameter("@RazonSocial", Entidad.RazonSocial)); 
+                    comando.ExecuteNonQuery();
+                }
+            }
+            Modificado = Obtener(Entidad.RUC);
+            return Modificado;
+        }
+
+        public void Eliminar(string RUC)
+        {
+            string sql = "UPDATE dbo.Universidad SET FlgActivo=@FlgActivo WHERE RUC=@RUC";
+            using (SqlConnection conexion = new SqlConnection(Local.ConnectionString_Seguridad))
+            {
+                conexion.Open();
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                {
+                    comando.Parameters.Add(new SqlParameter("@RUC", RUC));
                     comando.Parameters.Add(new SqlParameter("@FlgActivo", 0));
                     comando.ExecuteNonQuery();
                 }
@@ -100,7 +84,7 @@ namespace WCF_GestionarPermisoService.Persistencia
         public List<Universidad> Listar()
         {
             List<Universidad> Encontrados = new List<Universidad>(); 
-            string sql = "SELECT * FROM dbo.Universidad where FlgActivo = 1";
+            string sql = "SELECT * FROM dbo.Universidad";
             using (SqlConnection conexion = new SqlConnection(Local.ConnectionString_Seguridad))
             {
                 conexion.Open();
@@ -112,7 +96,6 @@ namespace WCF_GestionarPermisoService.Persistencia
                         { 
                             Encontrados.Add(new Universidad()
                             {
-                                IdUniversidad = (int)resultado["IdUniversidad"],
                                 RUC = (string)resultado["RUC"],
                                 RazonSocial = (string)resultado["RazonSocial"] 
                             });

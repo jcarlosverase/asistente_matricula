@@ -12,7 +12,7 @@ namespace WCF_NotificacionService
     public class EnviarCorreo : IEnviarCorreo
     { 
         public void Enviar(string Correo, string Asunto, string Mensaje, byte[] Archivo = null, string NombreArchivo = "")
-        {
+        { 
             var instMail = new Mail("smtp.gmail.com", "aqonotifications@gmail.com", "AqoN2017%");
             instMail.ValorDelReceptor(Correo, Asunto, Mensaje);
             if (Archivo != null && NombreArchivo.Length > 0)

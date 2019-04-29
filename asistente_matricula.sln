@@ -20,24 +20,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_UniversidadAService", "WCF_UniversidadAService\WCF_UniversidadAService.csproj", "{072003B0-74C5-4540-9D4C-DD9090B1594F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GestionarUniversidadService", "WCF_GestionarUniversidadService\WCF_GestionarUniversidadService.csproj", "{AFC1C516-808F-4E66-AE74-F7F7D991A2A6}"
-	ProjectSection(ProjectDependencies) = postProject
-		{411C770F-F684-4B00-933C-50634FE3F525} = {411C770F-F684-4B00-933C-50634FE3F525}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GestionarAsistenteService", "WCF_GestionarAsistenteService\WCF_GestionarAsistenteService.csproj", "{00B66606-EFA7-4EE7-BA23-5DE27B4771F1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6F366046-4057-4515-9A0A-134EBFC4ED0A} = {6F366046-4057-4515-9A0A-134EBFC4ED0A}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GestionarReporteService", "WCF_GestionarReporteService\WCF_GestionarReporteService.csproj", "{20BFACB5-B58D-4C92-A532-F0DCE823967C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GestionarPermisoService", "WCF_GestionarPermisoService\WCF_GestionarPermisoService.csproj", "{C17EAC0B-B737-4E8D-8D1D-F46BCC97C5F4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_CursoService", "WCF_CursoService\WCF_CursoService.csproj", "{411C770F-F684-4B00-933C-50634FE3F525}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GestionarUniversidadServiceTest", "WCF_GestionarUniversidadServiceTest\WCF_GestionarUniversidadServiceTest.csproj", "{C68E7E2B-D262-4A40-8850-137530596B57}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_GestionarAsistenteServiceTest", "WCF_GestionarAsistenteServiceTest\WCF_GestionarAsistenteServiceTest.csproj", "{FACFF8A1-D9D6-4FDF-802A-CAD4F5140401}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,22 +75,6 @@ Global
 		{20BFACB5-B58D-4C92-A532-F0DCE823967C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20BFACB5-B58D-4C92-A532-F0DCE823967C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20BFACB5-B58D-4C92-A532-F0DCE823967C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C17EAC0B-B737-4E8D-8D1D-F46BCC97C5F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C17EAC0B-B737-4E8D-8D1D-F46BCC97C5F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C17EAC0B-B737-4E8D-8D1D-F46BCC97C5F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C17EAC0B-B737-4E8D-8D1D-F46BCC97C5F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{411C770F-F684-4B00-933C-50634FE3F525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{411C770F-F684-4B00-933C-50634FE3F525}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{411C770F-F684-4B00-933C-50634FE3F525}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{411C770F-F684-4B00-933C-50634FE3F525}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C68E7E2B-D262-4A40-8850-137530596B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C68E7E2B-D262-4A40-8850-137530596B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C68E7E2B-D262-4A40-8850-137530596B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C68E7E2B-D262-4A40-8850-137530596B57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FACFF8A1-D9D6-4FDF-802A-CAD4F5140401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FACFF8A1-D9D6-4FDF-802A-CAD4F5140401}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FACFF8A1-D9D6-4FDF-802A-CAD4F5140401}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FACFF8A1-D9D6-4FDF-802A-CAD4F5140401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
