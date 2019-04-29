@@ -19,15 +19,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:64033/ValoracionService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://amaws01.azurewebsites.net/ValoracionService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ValoracionService.wsdl" MetadataType="Wsdl" ID="50879c46-a731-4dbf-b8fd-25ea7fe5597a" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?wsdl" />
-    <MetadataFile FileName="ValoracionService.xsd" MetadataType="Schema" ID="dab7204e-8d6b-46eb-82d8-8ebd2b750ca6" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?xsd=xsd3" />
-    <MetadataFile FileName="ValoracionService1.xsd" MetadataType="Schema" ID="0d281054-0534-41ce-b050-551ed380dcaf" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?xsd=xsd2" />
-    <MetadataFile FileName="ValoracionService.disco" MetadataType="Disco" ID="1a0aaa55-7fb6-4cdd-ad08-1ddf216d0765" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?disco" />
-    <MetadataFile FileName="ValoracionService2.xsd" MetadataType="Schema" ID="903528b9-1b00-483b-8598-18f858a58b2a" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?xsd=xsd0" />
-    <MetadataFile FileName="ValoracionService3.xsd" MetadataType="Schema" ID="fb2e016c-9598-452d-907e-e6f8be41b65b" SourceId="1" SourceUrl="http://localhost:64033/ValoracionService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ValoracionService.xsd" MetadataType="Schema" ID="6b15e0ef-eb81-43bd-8257-fec78e374ea3" SourceId="1" SourceUrl="http://amaws01.azurewebsites.net/ValoracionService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ValoracionService.disco" MetadataType="Disco" ID="1481afb2-a5da-47f9-8776-e5bd01ca6f95" SourceId="1" SourceUrl="http://amaws01.azurewebsites.net/ValoracionService.svc?disco" />
+    <MetadataFile FileName="ValoracionService1.xsd" MetadataType="Schema" ID="98b55c9a-2c7c-49cf-a3e1-9d107afa1a24" SourceId="1" SourceUrl="http://amaws01.azurewebsites.net/ValoracionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ValoracionService.wsdl" MetadataType="Wsdl" ID="bddc4d47-16dc-48e4-a334-c7c2da5e52da" SourceId="1" SourceUrl="http://amaws01.azurewebsites.net/ValoracionService.svc?wsdl" />
+    <MetadataFile FileName="ValoracionService2.xsd" MetadataType="Schema" ID="561573cc-d17f-4c5d-9152-8fedf30cb0fe" SourceId="1" SourceUrl="http://amaws01.azurewebsites.net/ValoracionService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ValoracionService3.xsd" MetadataType="Schema" ID="6cbdac91-bd3c-4072-a367-b45e2e9c050c" SourceId="1" SourceUrl="http://amaws01.azurewebsites.net/ValoracionService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

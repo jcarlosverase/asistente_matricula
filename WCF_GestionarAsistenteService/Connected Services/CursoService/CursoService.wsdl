@@ -27,10 +27,10 @@
   </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="https://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="https://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="https://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_CursoService.Response" />
-      <xsd:import schemaLocation="https://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WCF_CursoService.Dominio" />
+      <xsd:import schemaLocation="http://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_CursoService.Response" />
+      <xsd:import schemaLocation="http://amaws01.azurewebsites.net/CursoService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WCF_CursoService.Dominio" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICursoService_BuscarCursosPorNombre_InputMessage">
