@@ -13,7 +13,7 @@ namespace WCF_NotificacionService
     { 
         public void Enviar(string Correo, string Asunto, string Mensaje, byte[] Archivo = null, string NombreArchivo = "")
         { 
-            var instMail = new Mail("smtp.gmail.com", "aqonotifications@gmail.com", "AqoN2017%");
+            var instMail = new Mail("smtp.gmail.com", "", "");
             instMail.ValorDelReceptor(Correo, Asunto, Mensaje);
             if (Archivo != null && NombreArchivo.Length > 0)
                 instMail.AgregarArchivoByte(Archivo, NombreArchivo);
